@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="initial-scale=1.0,maximum-scale=1.0,minimum-scale=1.0,user-scalable=no,width=device-width" />
+
+        <title>Audio Distortion Demo</title>
+        <link rel="stylesheet" href="/css/app.css">
+    </head>
+
+    <body class="learn learnWebAudio">
+        <div id="wrapper">
+            <div id="main">
+                <div id="main-content">
+                <div id="learnWebAudio" class="learnPage">
+    <div class="reading container">
+
+<div class="webaudio-playerWrapper">
+    <canvas id="narratorVisualizer" width="1200" height="280"></canvas>
+    <div id="narratorLineTagBefore" class="webaudio-waveTag">
+        Original Audio
+    </div>
+    <div id="narratorLineTagAfter" class="webaudio-waveTag">
+        Audio with Radio Distortion
+    </div>
+
+    <div class="optionsSection dots ">
+        <div class="audioPlayButton audioControl" id="audioNarratorStartStop">
+            <i class="icon-pause"></i>
+            <i class="icon-play"></i>
+        </div>
+        <div id="distortionControl" class="audioControl audioSlider" >
+            <label class="webaudio-controlTitle">
+                Distortion:
+                <span id="distortionDisplay" class="valueDisplay"><span>0</span>%</span>
+            </label>
+            <div id="distortionSlider"></div>
+        </div>
+    </div>
+</div>
+
+<div class="webaudio-playerWrapper" style="display:none">
+    <canvas id="engineVisualizer" width="1200" height="280"></canvas>
+    <div id="engineLineTagBefore" class="webaudio-waveTag">
+        Original Audio
+    </div>
+    <div id="engineLineTagAfter" class="webaudio-waveTag">
+        Adjusted for Engine Throttle
+    </div>
+    <div class="optionsSection dots ">
+        <div class="audioPlayButton audioControl" id="audioEngineStartStop">
+            <i class="icon-pause"></i>
+            <i class="icon-play"></i>
+        </div>
+        <div id="throttleControl" class="audioControl audioSlider" >
+            <label class="webaudio-controlTitle">
+                Throttle:
+                <span id="throttleDisplay" class="valueDisplay"><span>0</span>%</span>
+            </label>
+            <div id="enginePitchSlider"></div>
+        </div>
+    </div>
+</div>
+
+    </div>
+</div>
+                </div>
+            </div>
+
+        </div>
+
+        <script src="//ajax.aspnetcdn.com/ajax/jQuery/jquery-2.1.3.min.js"></script>
+        <script>window.jQuery || document.write('<script src="/scripts/jquery.min.js"><\/script>')</script>
+        <script src="/scripts/libs.js"></script>
+		<script src="/scripts/babylon.min.js"></script>
+        <script src="/scripts/learn.js"></script>
+		<script src="http://tutsplus.github.io/github-analytics/ga-tracking.min.js"></script>
+
+        <script>
+            FlightArcade.learnWebAudio();
+        </script>
+
+    </body>
+</html>
